@@ -1,0 +1,5 @@
+{"level":50,"time":1681404106126,"pid":13344,"hostname":"DarioEma","msg":"Error al leer el carrito: TypeError: Cannot read properties of undefined (reading 'author')"}
+{"level":50,"time":1681404322439,"pid":7940,"hostname":"DarioEma","msg":"Error al leer el carrito: TypeError: Cannot destructure property 'name' of 'undefined' as it is undefined."}
+{"level":50,"time":1681404351462,"pid":7940,"hostname":"DarioEma","msg":"Error al leer el carrito: TypeError: Cannot destructure property 'name' of 'undefined' as it is undefined."}
+{"level":50,"time":1681404484839,"pid":13832,"hostname":"DarioEma","msg":"Error al leer el carrito: TypeError: Cannot read properties of undefined (reading 'author')"}
+{"level":50,"time":1681404493387,"pid":13832,"hostname":"DarioEma","msg":"Error al leer el carrito: TypeError: Cannot read properties of undefined (reading 'author')"}
