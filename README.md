@@ -70,46 +70,64 @@ PORT= puerto deseado.
 
 # Rutas de usuario no autenticado
 
-GET /: inicio muestra la pagina principal de la app.
-GET /productos: muestra el listado de productos.
-GET /productos/busqueda: muestra el producto buscado.
-GET /ingresar: muestra el formulario de logueo (para el formulario requiere el username(correo) y el password).
-GET /registrarse: muestra el formulario de registro (para el formulario requiere el name, lastName, address, age, phoneNumber, photo(imagen), username(correo) y el password).
-GET /ingresar/errorIngresar muestra una pagina en caso de error al ingresar ya sea por usuario inesistente o error de inicio de sesion.
-GET /ingresar/errorRegistro muestra una pagina en caso de error al registrarse ya sea por que exixte un usuario o error de registro.
+GET     /:                          inicio muestra la pagina principal de la app.
 
-POST /ingresar: envia y verifiaca los datos del formulario ingresar y en caso correcto redirige a la pagina de inicio con la session iniciada caso contrario redirige a la pagina de error.
-POST /registrarse: envia y verifiaca los datos del formulario registrarse y en caso correcto redirige a la pagina de inicio con la session iniciada caso contrario redirige a la pagina de error.
+GET     /productos:                 muestra el listado de productos.
+
+GET     /productos/busqueda:        muestra el producto buscado.
+
+GET     /ingresar:                  muestra el formulario de logueo (para el formulario requiere el username(correo) y el password).
+
+GET     /registrarse:               muestra el formulario de registro (para el formulario requiere el name, lastName, address, age, phoneNumber, photo(imagen), username(correo) y el password).
+
+GET     /ingresar/errorIngresar:    muestra una pagina en caso de error al ingresar ya sea por usuario inesistente o error de inicio de sesion.
+
+GET     /ingresar/errorRegistro:    muestra una pagina en caso de error al registrarse ya sea por que exixte un usuario o error de registro.
+
+POST    /ingresar:                  envia y verifiaca los datos del formulario ingresar y en caso correcto redirige a la pagina de inicio con la session iniciada caso contrario redirige a la pagina de error.
+
+POST    /registrarse:               envia y verifiaca los datos del formulario registrarse y en caso correcto redirige a la pagina de inicio con la session iniciada caso contrario redirige a la pagina de error.
 
 # Rutas de usuario autenticado
 
 Estas rutas requieren que el usuario inicie sesion.
 
-GET /: inicio muestra la pagina principal de la app.
-GET /productos: muestra el listado de productos.
-GET /productos/busqueda: muestra el producto buscado.
-GET /carrito: muestra el carrito con sus productos.
-GET /chat: muestra el chat con sus mensajes y permite enviar nuevos.
-GET /salir: permite al usuario cerrar la sesion.
+GET     /:                          inicio muestra la pagina principal de la app.
 
-POST /carrito: permite al asuario cargar productos al carrito con el id del producto.
-POST /carrito/producto: permite al asuario borrar productos del carrito con el id del producto.
-POST /compras: permite al usuario finalizar la compra de los productos que tiene en el carrito.
+GET     /productos:                 muestra el listado de productos.
 
-DELETE /carrito: permite al asuario borrar el carrito.
+GET     /productos/busqueda:        muestra el producto buscado.
+
+GET     /carrito:                   muestra el carrito con sus productos.
+
+GET     /chat:                      muestra el chat con sus mensajes y permite enviar nuevos.
+
+GET     /salir:                     permite al usuario cerrar la sesion.
+
+POST    /carrito:                   permite al asuario cargar productos al carrito con el id del producto.
+
+POST    /carrito/producto:          permite al asuario borrar productos del carrito con el id del producto.
+
+POST    /compras:                   permite al usuario finalizar la compra de los productos que tiene en el carrito.
+
+DELETE  /carrito:                   permite al asuario borrar el carrito.
 
 # Rutas de usuario autenticado admin
 
 Estas rutas requieren que el administrador inicie sesion.
 
-GET /: inicio muestra la pagina principal de la app.
-GET /productos: muestra el listado de productos y un formulario de carga de nuevos productos que requieren (name, description, code, price, photo).
-GET /productos/busqueda: muestra el producto buscado.
-GET /chat: muestra el chat con sus mensajes y permite enviar nuevos.
-GET /salir: permite al usuario cerrar la sesion.
+GET     /:                          inicio muestra la pagina principal de la app.
 
-POST /productos: Permite publicar nuevos productos con los datos del formulario.
+GET     /productos:                 muestra el listado de productos y un formulario de carga de nuevos productos que requieren (name, description, code, price, photo).
 
-PUT /productos/id: Permite publicar actualizar productos con los datos del formulario.
+GET     /productos/busqueda:        muestra el producto buscado.
 
-DELETE /productos/id permite eliminar productos con el numero de id.
+GET     /chat:                      muestra el chat con sus mensajes y permite enviar nuevos.
+
+GET     /salir:                     permite al usuario cerrar la sesion.
+
+POST    /productos:                 Permite publicar nuevos productos con los datos del formulario.
+
+PUT     /productos/id:              Permite publicar actualizar productos con los datos del formulario.
+
+DELETE  /productos/id:              permite eliminar productos con el numero de id.
